@@ -1,0 +1,34 @@
+{
+  "name": "cis3339-homework1",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Vue 3 and local MongoDB student management application",
+  "engines": {
+    "node": ">=22.12"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "start": "node backend/server.cjs",
+    "mongo": "node scripts/local-mongo.cjs",
+    "test": "npm run build && node --test tests/api.test.cjs && vitest run",
+    "test:ui": "vitest run",
+    "package": "node scripts/package.cjs"
+  },
+  "dependencies": {
+    "dotenv": "^18.0.10",
+    "express": "^5.1.0",
+    "mongoose": "^9.12.2",
+    "pinia": "^4.1.0",
+    "vue": "^3.5.45",
+    "vue-router": "^4.6.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.4",
+    "@vue/test-utils": "2.4.6",
+    "fflate": "^0.8.2",
+    "jsdom": "^26.1.0",
+    "vite": "^6.4.6",
+    "vitest": "^3.2.7"
+  }
+}
